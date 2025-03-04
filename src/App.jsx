@@ -47,7 +47,7 @@ function App() {
             color: "#fff",
             backgroundColor: "#000",
             duration: 1.2,
-            ease: "power2.inOut"
+            ease: "power2.inOut",
           });
         }
         return !prevShowCanvas;
@@ -72,7 +72,7 @@ function App() {
             <Canvas details={canvasdets} key={index} />
           ))}
         <div className="w-full h-screen relative z-[1] ">
-          <nav className="w-full p-8 flex justify-between z-50">
+          <nav className="w-full p-6 flex justify-between z-50">
             <div className="brand text-2xl font-regular ">Thirtysixstudio</div>
             <div className="links flex gap-10">
               {["Home", "About", "Projects", "Contact"].map((link, index) => (
@@ -93,16 +93,16 @@ function App() {
                 At Thirtysixstudio, we build digital assets and immersive
                 experiences for purposeful brands.
               </h3>
-              <p className="text-md w-[80%] mt-10 font-normal">
+              <p className="text-md w-[80%] mt-7 font-normal">
                 We're a boutique production studio focused on design, animation,
                 and technology, constantly rethinking what digital craft can do
                 for present-day ads and campaigns.
               </p>
-              <p className="text-md mt-5">Scroll</p>
+              <p className="text-md mt-4">Scroll</p>
             </div>
           </div>
 
-          <div className="w-full relative top-5 bottom-0 left-0 ">
+          <div className="w-full relative top-4 bottom-0 left-0 ">
             <h1
               ref={headingref}
               className="text-[13.5rem] font-normal tracking-tight leading-none pl-5"
@@ -114,9 +114,7 @@ function App() {
       </div>
       <div className="w-full relative h-screen  mt-32 px-10">
         {showCanvas &&
-          data[1].map((canvasdets, index) => (
-          <Canvas details={canvasdets} />
-        ))}
+          data[1].map((canvasdets, index) => <Canvas details={canvasdets} />)}
         <div className="relative z-[1]">
           <h1 className="text-6xl tracking-tighter">About the Brand</h1>
           <p className="text-3xl leading-[1.6] w-[80%] mt-10 font-normal ">
@@ -131,6 +129,37 @@ function App() {
           />
         </div>
       </div>
+
+      <div className="w-full absolute h-screen  mt-32 px-10">
+        {showCanvas &&
+          data[2].map((canvasdets, index) => <Canvas details={canvasdets} />)}
+        <div className="relative z-[1] mt-56">
+          <div className="flex flex-row gap-24 px-10">
+            <h1 className="text-3xl tracking-tighter w-[400px] p-10">
+              01 - What We Do
+            </h1>
+            <div className="ml-48 w-[40%]">
+              <p className="text-2xl leading-[1.1] w-[85%] mt-10 font-normal ">
+                We aim to elevate digital production in the advertising space,
+                bringing your ideas to life.
+              </p>
+              <p className="text-md leading-[1.2] w-[75%] mt-64 font-normal mb-20 ">
+                As a contemporary studio, we use cutting-edge design practices
+                and the latest technologies to deliver current digital work.{" "}
+                <br />
+                <br />
+                Our commitment to innovation and simplicity, paired with our
+                agile approach, ensures your journey with us is smooth and
+                enjoyable from start to finish.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      OUR SERVICES
+
     </div>
   );
 }
