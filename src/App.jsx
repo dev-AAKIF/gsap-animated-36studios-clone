@@ -156,10 +156,6 @@ function App() {
           </div>
         </div>
       </div>
-      
-
-      OUR SERVICES
-
     </div>
   );
 }
